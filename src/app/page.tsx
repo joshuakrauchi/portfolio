@@ -13,7 +13,7 @@ const Index = () => {
 
   const [currentPage, setCurrentPage] = useState("home");
 
-  let onMouseMove = (e) => {
+  let onMouseMove = (e: any) => {
     setMousePosition({ x: e.clientX, y: e.clientY });
   };
 
