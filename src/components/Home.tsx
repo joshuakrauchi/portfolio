@@ -7,7 +7,7 @@ import "animate.css"
 import Image from "next/image";
 import profileBlurb from "../profileBlurb";
 
-const Home = ({ mousePosition }) => {
+const Home = (props: { mousePosition: any }) => {
   return (
     <>
       <div className="mt-16 flex flex-col lg:flex-row">
@@ -26,7 +26,7 @@ const Home = ({ mousePosition }) => {
         </div>
         <div className="basis-1/3 flex flex-col w-full pt-16">
           <div>
-            <Cat mousePosition={mousePosition} />
+            <Cat mousePosition={props.mousePosition} />
           </div>
           <div className="flex justify-between mb-10">
             <ContactButton imageSource={"emailIcon.svg"} animationDelay={300} size={50} address="mailto:joshuakrauchi@gmail.com" />

@@ -42,7 +42,7 @@ const CatPupil = ({ mousePosition }) => {
   );
 }
 
-const Cat = ({ mousePosition }) : JSX.Element => {
+const Cat = (props: { mousePosition: any }) : JSX.Element => {
   return (
     <div style={{ animationDelay: 400 + "ms" }} className="animate__animated animate__fadeInRight flex h-full w-full justify-center items-center bg-black">
       <div className="cat">
@@ -50,10 +50,10 @@ const Cat = ({ mousePosition }) : JSX.Element => {
         <div className="ear ear--right"></div>
         <div className="face">
           <div className="eye eye--left">
-            <CatPupil mousePosition={mousePosition} />
+            <CatPupil mousePosition={props.mousePosition} />
           </div>
           <div className="eye eye--right">
-            <CatPupil mousePosition={mousePosition} />
+            <CatPupil mousePosition={props.mousePosition} />
           </div>
           <div className="muzzle"></div>
         </div>
