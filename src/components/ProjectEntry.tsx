@@ -20,12 +20,12 @@ const ProjectEntry = (props: { previewComponent: JSX.Element, isLeft: boolean, t
             <div className="pt-4">
               <p>{props.description}</p>
               <ul className="list-disc list-inside">
-                {props.bullets.map((bullet: string) => <li className="indent-8" key={bullet}>{bullet}</li>)}
+                {props.bullets.map((bullet: string, index: number) => <li key={index} className="indent-8">{bullet}</li>)}
               </ul>
             </div>
             <div className="pt-4 flex gap-8 justify-center">
               {
-                props.links.map((link) => <ContactButton imageSource={link.iconSrc} animationDelay={0} size={50} address={link.linkSrc} />)
+                props.links.map((link, index: number) => <ContactButton key={index} imageSource={link.iconSrc} animationDelay={0} size={50} address={link.linkSrc} />)
               }
             </div>
           </div>
