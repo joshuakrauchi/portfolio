@@ -18,7 +18,7 @@ const Index = () => {
   };
 
   return (
-    <div style={{ "--animate-duration": 800 + "ms" }} className="text-white" onMouseMove={onMouseMove}>
+    <div className="text-white" onMouseMove={onMouseMove}>
       <div className="bg-black h-fit flex flex-grow flex-col min-h-screen">
         <nav className="flex justify-end">
           <MenuButton buttonText={"Home"} address={"#"} onClick={() => setCurrentPage("home")} isActive={currentPage == "home"} />
