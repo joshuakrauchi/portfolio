@@ -2,7 +2,7 @@
 
 import { useRef, useState } from 'react';
 
-const CatPupil = ({ mousePosition }) => {
+const CatPupil = (props: { mousePosition: any }) => {
   const pupil = useRef(null);
 
   const calculatePupilPosition = () =>
@@ -11,7 +11,7 @@ const CatPupil = ({ mousePosition }) => {
     let y = 0.0;
 
     let pupilValue : any = pupil.current;
-    if ((pupilValue != null) && (mousePosition != null))
+    if ((pupilValue != null) && (props.mousePosition != null))
     {
       let rect : DOMRect = pupilValue.getBoundingClientRect();
 
@@ -19,8 +19,8 @@ const CatPupil = ({ mousePosition }) => {
       let containerWidth = Math.round(rect.width) * 2;
       let containerHeight = Math.round(rect.height) * 2;
   
-      let mouseX = mousePosition.x - rect.left;
-      let mouseY = mousePosition.y - rect.top;
+      let mouseX = props.mousePosition.x - rect.left;
+      let mouseY = props.mousePosition.y - rect.top;
       let percentageX = (mouseX / containerWidth) * 100.0;
       let percentageY = (mouseY / containerHeight) * 100.0;
 
