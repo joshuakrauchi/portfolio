@@ -1,12 +1,4 @@
 import ProjectEntry from "./ProjectEntry";
-import majorMiners from "/public/majorminers.png";
-import GitHubIcon from "/public/GitHubIcon.svg";
-import SteamIcon from "/public/SteamIcon.svg";
-import itchioIcon from "/public/itchioIcon.svg";
-import devpostIcon from "/public/devpostIcon.svg";
-import numberNinja from "/public/numberNinja.png"
-import directX12Engine from "/public/directX12Engine.png";
-import reshoot from "/public/reshoot.png";
 import Image from "next/image";
 
 const Portfolio = () => {
@@ -29,7 +21,7 @@ const Portfolio = () => {
           "Refactored the weapons system to have a more uniform object-oriented design.",
         ]}
         links={[
-          { iconSrc: SteamIcon, linkSrc: "https://store.steampowered.com/app/611360/Video_Horror_Society/" },
+          { iconSrc: "/SteamIcon.svg", linkSrc: "https://store.steampowered.com/app/611360/Video_Horror_Society/" },
         ]}
       />
       <ProjectEntry
@@ -46,11 +38,11 @@ const Portfolio = () => {
           "Designed and implemented an inventory system, gun mechanics, and randomized spawning logic.",
         ]}
         links={[
-          { iconSrc: SteamIcon, linkSrc: "https://store.steampowered.com/app/1764910/Spooky_Horror_Game/" },
+          { iconSrc: "/SteamIcon.svg", linkSrc: "https://store.steampowered.com/app/1764910/Spooky_Horror_Game/" },
         ]}
       />
       <ProjectEntry
-        previewComponent={<Image className={previewComponentClass} src={reshoot} />}
+        previewComponent={<Image className={previewComponentClass} src={"/reshoot.png"} alt={"reshoot image"} height={500} width={500} />}
         isLeft={true}
         title="ReShoot"
         position="Developer"
@@ -64,12 +56,12 @@ const Portfolio = () => {
           "Demo available on Itch.io.",
         ]}
         links={[
-          { iconSrc: itchioIcon, linkSrc: "https://joshuakrauchi.itch.io/reshoot" },
-          { iconSrc: GitHubIcon, linkSrc: "https://github.com/joshuakrauchi/shooter" },
+          { iconSrc: "/itchioIcon.svg", linkSrc: "https://joshuakrauchi.itch.io/reshoot" },
+          { iconSrc: "/GitHubIcon.svg", linkSrc: "https://github.com/joshuakrauchi/shooter" },
         ]}
       />
       <ProjectEntry
-        previewComponent={<Image className={previewComponentClass} src={numberNinja} />}
+        previewComponent={<Image className={previewComponentClass} src={"/numberNinja.png"} height={500} width={500} alt="number ninja image" />}
         isLeft={false}
         title="Number Ninja"
         position="Developer"
@@ -81,11 +73,11 @@ const Portfolio = () => {
           "Implemented two enemy attacks: a projectile-based subtraction attack and a jumping division attack.",
         ]}
         links={[
-          { iconSrc: GitHubIcon, linkSrc: "https://github.com/Mazianos/TownTwoAlt" },
+          { iconSrc: "/GitHubIcon.svg", linkSrc: "https://github.com/Mazianos/TownTwoAlt" },
         ]}
       />
       <ProjectEntry
-        previewComponent={<Image className={previewComponentClass} src={directX12Engine} />}
+        previewComponent={<Image className={previewComponentClass} src={"/directX12Engine.png"} height={500} width={500} alt="directX 12 game engine image" />}
         isLeft={true}
         title="DirectX 12 Game Engine"
         position="Engine Developer"
@@ -97,11 +89,11 @@ const Portfolio = () => {
           "Used the DirectX12 rendering pipeline to create a full software project.",
         ]}
         links={[
-          { iconSrc: GitHubIcon, linkSrc: "https://github.com/notyalcs/LBD_Engine" },
+          { iconSrc: "/GitHubIcon.svg", linkSrc: "https://github.com/notyalcs/LBD_Engine" },
         ]}
       />
       <ProjectEntry
-        previewComponent={<Image className={previewComponentClass} src={majorMiners} />}
+        previewComponent={<Image className={previewComponentClass} src={"/majorMiners.png"} height={500} width={500} alt={"major miners image"} />}
         isLeft={false}
         title="Major Miners"
         position="Developer"
@@ -115,12 +107,12 @@ const Portfolio = () => {
           "Demo available on Itch.io.",
         ]}
         links={[
-          { iconSrc: itchioIcon, linkSrc: "https://mark-keeble.itch.io/major-miners" },
-          { iconSrc: GitHubIcon, linkSrc: "https://github.com/metalpipemomo/townone-team10" },
+          { iconSrc: "/itchioIcon.svg", linkSrc: "https://mark-keeble.itch.io/major-miners" },
+          { iconSrc: "/GitHubIcon.svg", linkSrc: "https://github.com/metalpipemomo/townone-team10" },
         ]}
       />
       <ProjectEntry
-        previewComponent={<iframe className="place-self-center aspect-video w-full basis-2/3" src="https://www.youtube.com/embed/Yg10IbmY_nQ" title="YouTube video player" allow="web-share; fullscreen" />}
+        previewComponent={<iframe className={previewComponentClass} src="https://www.youtube.com/embed/Yg10IbmY_nQ" title="YouTube video player" allow="web-share; fullscreen" />}
         isLeft={true}
         title="CodeHunter"
         position="Back-end Developer"
@@ -133,11 +125,11 @@ const Portfolio = () => {
           "Created a secure datastore solution for user credentials and analytics using MongoDB with Mongoose.",
         ]}
         links={[
-          { iconSrc: GitHubIcon, linkSrc: "https://github.com/dmgamboa/codehunter" },
+          { iconSrc: "/GitHubIcon.svg", linkSrc: "https://github.com/dmgamboa/codehunter" },
         ]}
       />
       <ProjectEntry
-        previewComponent={<iframe className="place-self-center aspect-video w-full basis-2/3" src="https://www.youtube.com/embed/zOv98-r_93w" title="YouTube video player" allow="web-share; fullscreen" />}
+        previewComponent={<iframe className={previewComponentClass} src="https://www.youtube.com/embed/zOv98-r_93w" title="YouTube video player" allow="web-share; fullscreen" />}
         isLeft={false}
         title="COVID-19 Worldwide"
         position="Developer"
@@ -150,7 +142,7 @@ const Portfolio = () => {
           "Retrieved and parsed visualization data.",
         ]}
         links={[
-          { iconSrc: devpostIcon, linkSrc: "https://devpost.com/software/covid19-globe" },
+          { iconSrc: "/devpostIcon.svg", linkSrc: "https://devpost.com/software/covid19-globe" },
         ]}
       />
     </div>
