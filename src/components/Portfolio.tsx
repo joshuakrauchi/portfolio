@@ -25,8 +25,26 @@ const Portfolio = () => {
         ]}
       />
       <ProjectEntry
-        previewComponent={<video className={previewComponentClass} src="https://cdn.cloudflare.steamstatic.com/steam/apps/256853231/movie480_vp9.webm" controls={true} autoPlay={true} muted={true} loop={true} />}
+        previewComponent={<iframe className={previewComponentClass} src="https://www.youtube.com/embed/SLcEItB5nKA" title="YouTube video player" allow="web-share; fullscreen" />}
         isLeft={false}
+        title="CHROMODE!!"
+        position="Developer"
+        framework="Unreal Engine 5"
+        languages="C++"
+        description="A high intensity arena shooter made for Bigmode Game Jam 2023."
+        bullets={[
+          "Integrated AI movement, spawning, and shooting behaviors using Behavior Trees and EQS.",
+          "Implemented the red laser cannon and blue assault rifle weapons using C++.",
+          "Designed Niagara particle systems for explosions and gun beams, and a low-res post processing shader.",
+        ]}
+        links={[
+          { iconSrc: "/itchioIcon.svg", linkSrc: "https://joshuakrauchi.itch.io/chromode" },
+          { iconSrc: "/GitHubIcon.svg", linkSrc: "https://github.com/joshuakrauchi/bigmode2023" },
+        ]}
+      />
+      <ProjectEntry
+        previewComponent={<video className={previewComponentClass} src="https://cdn.cloudflare.steamstatic.com/steam/apps/256853231/movie480_vp9.webm" controls={true} autoPlay={true} muted={true} loop={true} />}
+        isLeft={true}
         title="Spooky Horror Game"
         position="Developer"
         framework="Unreal Engine 4"
@@ -43,7 +61,7 @@ const Portfolio = () => {
       />
       <ProjectEntry
         previewComponent={<Image className={previewComponentClass} src={"/reshoot.png"} alt={"reshoot image"} height={500} width={500} />}
-        isLeft={true}
+        isLeft={false}
         title="ReShoot"
         position="Developer"
         framework="Unity"
